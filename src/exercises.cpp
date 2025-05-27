@@ -214,8 +214,6 @@ string exercise_14(int number_of_docs) {
         return "Becario/a intermedio/a";
     } else {
         return "Becario/a inicial";
-    }
-  return "";
 }
 
 void exercise_15(int a, int b, int c) {
