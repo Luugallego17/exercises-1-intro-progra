@@ -47,7 +47,15 @@ void exercise_3(int a, int b) {
 }
 
 void exercise_4(double n, double a, double b, double x, double y) {
-  // TODO: YOUR CODE HERE
+  double result = N;
+    
+    if (N > B) {
+        result = N * (1 - Y / 100.0);
+    } else if (N > A) {
+        result = N * (1 - X / 100.0);
+    }
+    
+    cout << result << endl;
 }
 
 void exercise_5(char character) {
