@@ -208,7 +208,13 @@ string exercise_13(int age, int years_of_experience) {
 }
 
 string exercise_14(int number_of_docs) {
-  // TODO: YOUR CODE HERE
+     if (number_of_docs >= 20) {
+        return "Becario/a avanzado/a";
+    } else if (number_of_docs >= 10) {
+        return "Becario/a intermedio/a";
+    } else {
+        return "Becario/a inicial";
+    }
   return "";
 }
 
