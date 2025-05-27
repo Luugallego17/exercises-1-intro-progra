@@ -59,15 +59,37 @@ void exercise_4(double n, double a, double b, double x, double y) {
 }
 
 void exercise_5(char character) {
-  // TODO: YOUR CODE HERE
+    int count = 0;
+
+    if (n >= 1 && n % 1 == 0) count++;
+    if (n >= 2 && n % 2 == 0) count++;
+    if (n >= 3 && n % 3 == 0) count++;
+    if (n >= 4 && n % 4 == 0) count++;
+    if (n >= 5 && n % 5 == 0) count++;
+    if (n >= 6 && n % 6 == 0) count++;
+    if (n >= 7 && n % 7 == 0) count++;
+    if (n >= 8 && n % 8 == 0) count++;
+    if (n >= 9 && n % 9 == 0) count++;
+    if (n >= 10 && n % 10 == 0) count++;
+
+    cout << count << endl;
 }
 
 void exercise_6(int number) {
-  // TODO: YOUR CODE HERE
+      switch(day) {
+        case 0: cout << "Domingo" << endl; break;
+        case 1: cout << "Lunes" << endl; break;
+        case 2: cout << "Martes" << endl; break;
+        case 3: cout << "Miércoles" << endl; break;
+        case 4: cout << "Jueves" << endl; break;
+        case 5: cout << "Viernes" << endl; break;
+        case 6: cout << "Sábado" << endl; break;
+        default: cout << "Invalid input" << endl; break;
+    }
 }
 
 void exercise_7(double r) {
-  // TODO: YOUR CODE HERE
+
 }
 
 void exercise_8(long int seconds) {
