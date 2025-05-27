@@ -29,7 +29,21 @@ void exercise_2(double A, double B, double C) {
 }
 
 void exercise_3(int a, int b) {
-  // TODO: YOUR CODE HERE
+    if (a <= b) {
+        for (int i = a; i <= b; ++i) {
+            if (i % 7 == 0) {
+              cout << i << " ";
+            }
+        }
+    } else {
+        for (int i = a; i >= b; --i) {
+            if (i % 7 == 0) {
+              cout << i << " ";
+            }
+        }
+    }
+
+
 }
 
 void exercise_4(double n, double a, double b, double x, double y) {
