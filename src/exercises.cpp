@@ -77,7 +77,7 @@ void exercise_5(char character) {
 
 void exercise_6(int number) {
       switch(day) {
-        case 0: cout << "Domingo" << endl; break;
+        case 7: cout << "Domingo" << endl; break;
         case 1: cout << "Lunes" << endl; break;
         case 2: cout << "Martes" << endl; break;
         case 3: cout << "Miércoles" << endl; break;
@@ -89,7 +89,12 @@ void exercise_6(int number) {
 }
 
 void exercise_7(double r) {
-
+    if (r < 0) {
+        cout << "Error: Radius cannot be negative." << endl;
+    } else {
+        double area = 4 * M_PI * r * r;
+        cout << fixed << setprecision(9) << area << endl;
+    }
 }
 
 void exercise_8(long int seconds) {
