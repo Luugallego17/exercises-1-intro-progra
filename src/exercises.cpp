@@ -217,7 +217,10 @@ string exercise_14(int number_of_docs) {
 }
 
 void exercise_15(int a, int b, int c) {
-  // TODO: YOUR CODE HERE
+     int smallest = a;
+    if (b < smallest) smallest = b;
+    if (c < smallest) smallest = c;
+    cout << smallest << endl;
 }
 
 void exercise_16(int debut, int fin) {
