@@ -5,11 +5,27 @@
 using namespace std;
 
 void exercise_1(string s1, string s2, string s3) {
-  // TODO: YOUR CODE HERE
+    string min = a;
+    if (b < min) min = b;
+    if (c < min) min = c;
+    cout << min;
 }
 
 void exercise_2(double A, double B, double C) {
-  // TODO: YOUR CODE HERE
+    if (A != 0) {
+        double D = B * B - 4 * A * C;
+        if (D > 0) {
+            double x1 = (-B + sqrt(D)) / (2 * A);
+            double x2 = (-B - sqrt(D)) / (2 * A);
+            cout << x1 << " " << x2;
+        } else if (D == 0) {
+            double x = -B / (2 * A);
+            cout << x;
+        }
+    } else if (B != 0) {
+        double x = -C / B;
+        std::cout << x;
+    }
 }
 
 void exercise_3(int a, int b) {
