@@ -224,5 +224,14 @@ void exercise_15(int a, int b, int c) {
 }
 
 void exercise_16(int debut, int fin) {
-  // TODO: YOUR CODE HERE
+    if (debut <= fin) {
+        for (int i = debut; i <= fin; ++i) {
+            if (i % 2 == 0) cout << i << " ";
+        }
+    } else {
+        for (int i = debut; i >= fin; --i) {
+            if (i % 2 == 0) cout << i << " ";
+        }
+    }
+    cout << endl;
 }
