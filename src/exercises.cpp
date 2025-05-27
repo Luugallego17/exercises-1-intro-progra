@@ -1,14 +1,13 @@
-
 #include <cmath>
 #include <iostream>
 
 using namespace std;
 
 void exercise_1(string s1, string s2, string s3) {
-    string min = a;
-    if (b < min) min = b;
-    if (c < min) min = c;
-    cout << min;
+    string min = s1;
+    if (s2 < min) min = s2;
+    if (s3 < min) min = s3;
+    cout << min << endl;
 }
 
 void exercise_2(double A, double B, double C) {
@@ -17,73 +16,74 @@ void exercise_2(double A, double B, double C) {
         if (D > 0) {
             double x1 = (-B + sqrt(D)) / (2 * A);
             double x2 = (-B - sqrt(D)) / (2 * A);
-            cout << x1 << " " << x2;
+            cout << x1 << " " << x2 << endl;
         } else if (D == 0) {
             double x = -B / (2 * A);
-            cout << x;
+            cout << x << endl;
         }
     } else if (B != 0) {
         double x = -C / B;
-        std::cout << x;
+        cout << x << endl;
     }
 }
 
 void exercise_3(int a, int b) {
     if (a <= b) {
-        for (int i = a; i <= b; ++i) {
-            if (i % 7 == 0) {
-              cout << i << " ";
+        int current = a;
+        while (current <= b) {
+            if (current % 7 == 0) {
+                cout << current << " ";
             }
+            current++;
         }
     } else {
-        for (int i = a; i >= b; --i) {
-            if (i % 7 == 0) {
-              cout << i << " ";
+        int current = a;
+        while (current >= b) {
+            if (current % 7 == 0) {
+                cout << current << " ";
             }
+            current--;
         }
     }
-
-
+    cout << endl;
 }
 
 void exercise_4(double n, double a, double b, double x, double y) {
-  double result = N;
-    
-    if (N > B) {
-        result = N * (1 - Y / 100.0);
-    } else if (N > A) {
-        result = N * (1 - X / 100.0);
+    double result = n;
+
+    if (n > b) {
+        result = n * (1 - y / 100.0);
+    } else if (n > a) {
+        result = n * (1 - x / 100.0);
     }
-    
+
     cout << result << endl;
 }
 
 void exercise_5(char character) {
-    int count = 0;
-
-    if (n >= 1 && n % 1 == 0) count++;
-    if (n >= 2 && n % 2 == 0) count++;
-    if (n >= 3 && n % 3 == 0) count++;
-    if (n >= 4 && n % 4 == 0) count++;
-    if (n >= 5 && n % 5 == 0) count++;
-    if (n >= 6 && n % 6 == 0) count++;
-    if (n >= 7 && n % 7 == 0) count++;
-    if (n >= 8 && n % 8 == 0) count++;
-    if (n >= 9 && n % 9 == 0) count++;
-    if (n >= 10 && n % 10 == 0) count++;
-
-    cout << count << endl;
+    if ((character >= 'a' && character <= 'z') || (character >= 'A' && character <= 'Z')) {
+        if (character == 'a' || character == 'e' || character == 'i' ||
+            character == 'o' || character == 'u' || character == 'A' ||
+            character == 'E' || character == 'I' || character == 'O' ||
+            character == 'U') {
+            cout << "Vocal" << endl;
+        } else {
+            cout << "Consonante" << endl;
+        }
+    } else {
+        cout << "No es una letra" << endl;
+    }
 }
 
 void exercise_6(int number) {
-      switch(day) {
-        case 7: cout << "Domingo" << endl; break;
+    switch(number) {
         case 1: cout << "Lunes" << endl; break;
         case 2: cout << "Martes" << endl; break;
         case 3: cout << "Miércoles" << endl; break;
         case 4: cout << "Jueves" << endl; break;
         case 5: cout << "Viernes" << endl; break;
         case 6: cout << "Sábado" << endl; break;
+        case 7: cout << "Domingo" << endl; break;
         default: cout << "Invalid input" << endl; break;
     }
 }
@@ -93,7 +93,7 @@ void exercise_7(double r) {
         cout << "Error: Radius cannot be negative." << endl;
     } else {
         double area = 4 * M_PI * r * r;
-        cout << fixed << setprecision(9) << area << endl;
+        cout << area << endl;
     }
 }
 
@@ -115,41 +115,86 @@ void exercise_8(long int seconds) {
 
     if (remaining_seconds < 10) cout << "0";
     cout << remaining_seconds << endl;
-  }
+}
 
 string exercise_9(string s1, string s2, string s3, string s4, string s5) {
-      char c1 = w1.empty() ? '\0' : w1[0];
-    char c2 = w2.empty() ? '\0' : w2[0];
-    char c3 = w3.empty() ? '\0' : w3[0];
-    char c4 = w4.empty() ? '\0' : w4[0];
-    char c5 = w5.empty() ? '\0' : w5[0];
+    char c1 = s1.empty() ? '\0' : s1[0];
+    char c2 = s2.empty() ? '\0' : s2[0];
+    char c3 = s3.empty() ? '\0' : s3[0];
+    char c4 = s4.empty() ? '\0' : s4[0];
+    char c5 = s5.empty() ? '\0' : s5[0];
 
-    // Imprimir concatenación
     cout << c1 << c2 << c3 << c4 << c5 << endl;
 
-    // Comparar primer y último caracter
     if (c1 == c5) {
         cout << "Hemos encontrado algo!" << endl;
     } else {
         cout << "Aun sin suerte" << endl;
     }
-  return "";
+
+    return "";
 }
 
 int exercise_10(int a, int b) {
-  // TODO: YOUR CODE HERE
+    cout << "Analizando a = " << a << endl;
+    bool multiplo3a = a % 3 == 0;
+    bool multiplo5a = a % 5 == 0;
+
+    if (multiplo3a) {
+        cout << "Es multiplo de 3" << endl;
+    }
+    if (multiplo5a) {
+        cout << "Es multiplo de 5" << endl;
+    }
+    if (!multiplo3a && !multiplo5a) {
+        cout << "No es multiplo ni de 3 ni de 5" << endl;
+    }
+
+    cout << "Analizando b = " << b << endl;
+    bool multiplo3b = b % 3 == 0;
+    bool multiplo5b = b % 5 == 0;
+
+    if (multiplo3b) {
+        cout << "Es multiplo de 3" << endl;
+    }
+    if (multiplo5b) {
+        cout << "Es multiplo de 5" << endl;
+    }
+    if (!multiplo3b && !multiplo5b) {
+        cout << "No es multiplo ni de 3 ni de 5" << endl;
+    }
+
+    return 0;
 }
 
 string exercise_11(int number) {
-  // TODO: YOUR CODE HERE
-  return "";
+    string result = "";
+    if (number % 3 == 0) result += "fizz";
+    if (number % 5 == 0) result += "buzz";
+    return result;
 }
 
 void exercise_12(string color1, int numb1,
                  string color2, int numb2,
                  string color3, int numb3,
                  string color4, int numb4) {
-  // TODO: YOUR CODE HERE
+    if (color1 == "rojo" && numb1 == 1) {
+        cout << "Encontrado!" << endl;
+        return;
+    }
+    if (color2 == "rojo" && numb2 == 1) {
+        cout << "Encontrado!" << endl;
+        return;
+    }
+    if (color3 == "rojo" && numb3 == 1) {
+        cout << "Encontrado!" << endl;
+        return;
+    }
+    if (color4 == "rojo" && numb4 == 1) {
+        cout << "Encontrado!" << endl;
+        return;
+    }
+    cout << "Seguir buscando" << endl;
 }
 
 string exercise_13(int age, int years_of_experience) {
