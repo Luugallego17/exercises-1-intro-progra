@@ -118,6 +118,21 @@ void exercise_8(long int seconds) {
   }
 
 string exercise_9(string s1, string s2, string s3, string s4, string s5) {
+      char c1 = w1.empty() ? '\0' : w1[0];
+    char c2 = w2.empty() ? '\0' : w2[0];
+    char c3 = w3.empty() ? '\0' : w3[0];
+    char c4 = w4.empty() ? '\0' : w4[0];
+    char c5 = w5.empty() ? '\0' : w5[0];
+
+    // Imprimir concatenación
+    cout << c1 << c2 << c3 << c4 << c5 << endl;
+
+    // Comparar primer y último caracter
+    if (c1 == c5) {
+        cout << "Hemos encontrado algo!" << endl;
+    } else {
+        cout << "Aun sin suerte" << endl;
+    }
   return "";
 }
 
