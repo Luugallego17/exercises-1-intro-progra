@@ -98,7 +98,18 @@ void exercise_7(double r) {
 }
 
 void exercise_8(long int seconds) {
-  // TODO: YOUR CODE HERE
+    if (seconds < 0) {
+        cout << "Error: Input seconds cannot be negative." << endl;
+        return;
+    }
+
+    int hours = seconds / 3600;
+    int minutes = (seconds % 3600) / 60;
+    int remaining_seconds = seconds % 60;
+
+    cout << setw(2) << setfill('0') << hours << ":"
+         << setw(2) << setfill('0') << minutes << ":"
+         << setw(2) << setfill('0') << remaining_seconds << endl;
 }
 
 string exercise_9(string s1, string s2, string s3, string s4, string s5) {
